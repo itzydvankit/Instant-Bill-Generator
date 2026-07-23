@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instant Bill Generator</title>
+  <link rel="stylesheet" href="style.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Instant Bill Generator</h1>
+
+    <div class="shop-section">
+      <input type="text" id="shopName" placeholder="Enter Shop Name">
+      <input type="text" id="shopAddress" placeholder="Enter Shop Address">
+    </div>
+
+    <div class="input-section">
+      <input type="text" id="itemName" placeholder="Item Name">
+      <input type="number" id="itemQuantity" placeholder="Quantity" min="1">
+      <input type="number" id="itemPrice" placeholder="Price per item (₹)" min="0">
+    </div>
+
+    <div class="button-row">
+  <button id="addItemBtn">Add Item</button>
+  <button id="resetBtn" class="reset-btn">Reset</button>
+</div>
+
+
+    <table id="receiptTable">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Qty</th>
+          <th>Price (₹)</th>
+          <th>Total (₹)</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="total">
+      <strong>Grand Total: ₹<span id="grandTotal">0.00</span></strong>
+    </div>
+
+    <button id="generateReceiptBtn">Generate Receipt</button>
+    
+
+
+    <div id="receiptOutput" class="receipt-output"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
