@@ -92,7 +92,24 @@ button {
 button:hover {
   background: #1f3edc;
 }
+.receipt-btns{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+}
 
+.receipt-btns button{
+    flex:1;
+}
+
+.new-bill-btn{
+    background:#28a745;
+    color:#fff;
+}
+
+.new-bill-btn:hover{
+    background:#218838;
+}
 /* Table */
 table {
   width: 100%;
